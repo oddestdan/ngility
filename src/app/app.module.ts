@@ -23,9 +23,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DragDropListComponent } from './components/drag-drop-list/drag-drop-list.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, SearchFilterPipe],
+  declarations: [AppComponent, NavigationComponent, SearchFilterPipe, DragDropListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,6 +47,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSnackBarModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
