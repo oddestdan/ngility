@@ -6,8 +6,7 @@ const path = require("path");
 const app = express();
 
 // MongoDB
-const mongoconfig = require("./config/mongodb-config");
-const dbURI = process.env.MONGODB_URI || mongoconfig.url;
+const dbURI = process.env.MONGODB_URI || require("./config/mongodb-config").url;
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
