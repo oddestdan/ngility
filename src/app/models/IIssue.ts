@@ -1,4 +1,7 @@
 export default interface IIssue {
-  id: string;
   name: string;
+  status: string;
+  isCompleted: boolean;
+  description: string;
+  _id: string;
 }

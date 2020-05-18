@@ -1,9 +1,8 @@
 const Issue = require("../models/issue");
 
 exports.issue_create = (req, res, next) => {
-  const issue = new Issue({
-    name: req.body.name,
-  });
+  const { name, description = "" } = req.body;
+  const issue = new Issue({ name, description });
 
   issue.save({ new: true }, (err, issue) => {
     if (err) {
