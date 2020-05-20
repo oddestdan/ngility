@@ -3,15 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start": "node server.js",
     "client": "ng serve",
-    "server": "nodemon ./server/server.js",
-    "start": "node ./server/server.js",
-    "dev": "concurrently \"npm run client\" \"npm run server \"",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "heroku-postbuild": "ng build --configuration=production"
   },
   "private": true,
   "dependencies": {
@@ -27,7 +24,6 @@
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.14",
     "rxjs": "~6.5.4",
@@ -48,7 +44,6 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
-    "nodemon": "^2.0.4",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

@@ -1,20 +1,14 @@
 language: node_js
 node_js:
-  - "12"
-sudo: false
- 
+- '12'
+before-install:
+  npm install -g @angular/cli
+install: npm install
 branches:
   only:
   - master
- 
-cache:
-  directories:
-    - node_modules
- 
 deploy:
   provider: heroku
-  skip_cleanup: true
-  keep-history: true
-  api-key:
-    secure: $HEROKU_API_KEY
   app: ngility
+  api_key:
+    secure: Q606rVxpZv0pxCc28Y17rnSKFCwz9yVPDezV3G0SQCj74qlBfnvllrOsnCulHFp2LdkA/G0UOed8WrX4ZXTltCT6H8RBm9vjmZM8yZrWAB5TDfBczfW3pl5k3hPaGpFe1o+BD7zuWbtmAly0Ik5H3MhgSuYqwKgIWwk2qvgNe5JE68BvuQj6Gu4Av47p8z9zyJf/wlLHnroNZcNdjJ0QMV7IpIN5rFf4QGesDSGv/WBKulVUeqQ9yLgpV0t1pnc5KaE/CFDEkpjficoNdUds6vaoasqqmECSwVSxe1mSQnbJ5RK9f23Y1OyedWXFwgmZeuBzr3AjGd/q2IV1g7rGEIIiESCmw0A9LYYrQpMUf7IHgVNM80u68jYAsRPwkyRJOHvFTALEaAsM+BNuljfTrQcuaoHSrXKRhy5I2Y5FYnkY7N6Wk7oxOrVFNFsEXEfGZerJ0wT3/MNIxEXMrw6FK4zDeNPChSknj3aep3xuHwQxfOHvZ5QEZBVCXR/SZHONphS03r0biEvsLE8MJyDG3LbrvwFxSSm3Sb0v3jw0HU+EolOmSqoVDxZPBrzIDBZrvTR5VdOnSbTgH+s3bvUf8FcJbeltufSHbLntVWslmjmFnwx0pqR24T1PbY/ctGfxCPYsmCNvrlvzndAXEF2W6mxss2WM79GU0HjwshJr4eI=

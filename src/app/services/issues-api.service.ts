@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import IIssue from 'src/app/models/IIssue';
-import { API_URL } from 'src/app/constants/apiUrl';
+import { API_URL } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
